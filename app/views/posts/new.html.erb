@@ -1,0 +1,6 @@
+<%= bootstrap_form_for @post, url: posts_path do |t| %>
+    <%= t.url_field :link %>
+    <%= t.text_field :title %>
+
+    <%= t.primary %>
+<% end %>
