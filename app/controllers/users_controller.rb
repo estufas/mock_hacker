@@ -5,6 +5,12 @@ class UsersController < ApplicationController
 
   def create
   	User.create user_params
-  	redirect_to users_path
+  	# redirect_to users_path
+  end
+
+  private
+
+  def user_params
+  	params.require(:user).permit(:email, :name, :password)
   end
 end
